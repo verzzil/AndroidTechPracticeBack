@@ -1,0 +1,249 @@
+GET http://localhost/users
+X-TOKEN: af591030-f5d7-4bb1-9ee5-fabc92581592
+
+###
+
+GET http://localhost/users/1
+
+###
+
+GET https://api.imageban.ru/v1
+Authorization: TOKEN C1GaFYnXVq3RCl1VLLPw
+Content-Type: application/json
+
+{
+  "image": "D:\/Downloads\/3.png"
+}
+
+###
+
+GET http://localhost/posts
+
+###
+
+GET http://localhost/posts/user/2
+
+###
+
+GET http://localhost/users/top
+
+###
+
+POST http://localhost/sign-in
+Content-Type: application/json
+
+{
+  "email": "xannanov.albert@mail.ru",
+  "password": "alba17"
+}
+
+###
+
+POST http://localhost/out
+Content-Type: application/json
+X-TOKEN: f9d5b9d5-f4b1-4842-abf3-57a29e27837a
+
+###
+
+
+
+
+
+
+
+
+
+
+POST http://localhost/sign-up
+Content-Type: application/json
+
+{
+  "email": "mail@mail.ru",
+  "firstName": "Marina",
+  "lastName": "Khannanova",
+  "password": "qwerty008"
+}
+
+###
+
+POST http://localhost/sign-up
+Content-Type: application/json
+
+{
+  "email": "xannanov.albert@mail.ru",
+  "firstName": "Albert",
+  "lastName": "Khannanov",
+  "password": "alba17"
+}
+
+###
+
+POST http://localhost/sign-up
+Content-Type: application/json
+
+{
+  "email": "ildar@mail.ru",
+  "firstName": "Illdar",
+  "lastName": "Khannanov",
+  "password": "ildar24"
+}
+
+###
+
+POST http://localhost/sign-up
+Content-Type: application/json
+
+{
+  "email": "dalechka@mail.ru",
+  "firstName": "Dalechka",
+  "lastName": "Kanipova",
+  "password": "ildar24"
+}
+
+###
+
+POST http://localhost/group/create
+Content-Type: application/json
+
+{
+  "title": "Новые люди",
+  "usersIds": [
+    1,
+    2,
+    3
+  ],
+  "idMainUser": 3
+}
+
+###
+
+POST http://localhost/group/create
+Content-Type: application/json
+
+{
+  "title": "another new group",
+  "usersIds": [
+    3,
+    2
+  ],
+  "idMainUser": 2
+}
+
+###
+
+POST http://localhost/group/act/create
+Content-Type: application/json
+
+{
+  "title": "Сделать мир лучше",
+  "groupId": 1
+}
+
+###
+
+POST http://localhost/group/act/proof/create
+Content-Type: application/json
+
+{
+  "groupActId": 1,
+  "photoLink": "vk.com",
+  "text": "any text"
+}
+
+###
+
+POST http://localhost/group/act/proof/moderator-decision
+Content-Type: application/json
+
+{
+  "moderatorId": 2,
+  "proofId": 1,
+  "decision": "APPROVED",
+  "reward": 100000
+}
+
+###
+
+POST http://localhost/user/act/create
+Content-Type: application/json
+
+{
+  "title": "asdfasdf",
+  "userId": 2
+}
+
+###
+
+POST http://localhost/user/act/proof/create
+Content-Type: application/json
+
+{
+  "userActId": 5,
+  "photoLink": "vk.com",
+  "text": "any text"
+}
+
+###
+
+POST http://localhost/user/act/proof/moderator-decision
+Content-Type: application/json
+
+{
+  "moderatorId": 2,
+  "proofId": 4,
+  "decision": "APPROVED",
+  "reward": 10000
+}
+
+###
+
+POST http://localhost/chat/create
+Content-Type: application/json
+
+{
+  "firstUserId": 2,
+  "secondUserId": 3
+}
+
+###
+
+GET http://localhost/chat/6
+
+###
+
+GET http://localhost/asdf
+
+###
+
+GET http://localhost/testAct/2
+
+###
+
+GET http://localhost/user/get-by-email?email=xa
+
+###
+
+POST http://localhost/user/change-settings/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "password": "qwerty007",
+  "newPassword": "qwerty007"
+}
+
+###
+
+GET http://localhost/group/1
+
+###
+
+GET http://localhost/user/act/continue/2
+
+###
+
+GET http://localhost/moderator/get-acts/2
+
+###
+
+GET http://localhost/users/top
