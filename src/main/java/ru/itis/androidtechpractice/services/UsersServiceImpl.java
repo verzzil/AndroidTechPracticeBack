@@ -216,6 +216,13 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
+    public void saveFirebaseToken(Integer userId, String firebaseToken) {
+        User user = usersRepository.findById(userId).orElseThrow(IllegalArgumentException::new);
+        user.setFirebaseToken(firebaseToken);
+        usersRepository.save(user);
+    }
+
+    @Override
     public List<ActDto> findContinueUserActs(Integer userId) {
         return userActsMyRepository.findAllContinueUserActs(userId);
     }

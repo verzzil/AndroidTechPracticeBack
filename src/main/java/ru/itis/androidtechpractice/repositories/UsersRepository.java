@@ -22,4 +22,10 @@ public interface UsersRepository extends JpaRepository<User, Integer> {
 
     List<User> findAllByEmailStartsWith(String email);
 
+    @Query(
+            nativeQuery = true,
+            value = "select * from account where id in (select user_id from users_chats_rel where chat_id = :chatId)"
+    )
+    List<User> findAllChatUsers(Integer chatId);
+
 }

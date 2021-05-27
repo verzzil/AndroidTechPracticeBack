@@ -10,6 +10,7 @@ import ru.itis.androidtechpractice.dto.MessageDto;
 import ru.itis.androidtechpractice.services.ChatsService;
 import ru.itis.androidtechpractice.services.MessagesService;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -41,7 +42,7 @@ public class ChatsController {
     }
 
     @PostMapping("/chat/send-message")
-    public ResponseEntity<MessageDto> sendMessage(@RequestBody MessageDto messageDto) {
+    public ResponseEntity<MessageDto> sendMessage(@RequestBody MessageDto messageDto) throws IOException {
         return ResponseEntity.ok(chatsService.sendMessage(messageDto));
     }
 

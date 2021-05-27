@@ -54,7 +54,7 @@ public class MessagesEndpoint {
     }
 
     @OnMessage
-    public void onMessage(Session session, MessageDto messageDto) {
+    public void onMessage(Session session, MessageDto messageDto) throws IOException {
 
         System.out.println(messageDto);
 

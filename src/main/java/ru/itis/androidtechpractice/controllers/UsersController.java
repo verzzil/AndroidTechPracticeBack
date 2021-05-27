@@ -134,4 +134,10 @@ public class UsersController {
         );
     }
 
+    @PostMapping("/user/{userId}/{firebaseToken}")
+    public ResponseEntity<Boolean> saveFirebaseToken(@PathVariable("userId") Integer userId, @PathVariable("firebaseToken") String firebaseToken) {
+        usersService.saveFirebaseToken(userId, firebaseToken);
+        return ResponseEntity.ok(true);
+    }
+
 }

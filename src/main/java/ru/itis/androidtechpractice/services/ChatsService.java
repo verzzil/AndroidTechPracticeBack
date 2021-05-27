@@ -6,6 +6,8 @@ import ru.itis.androidtechpractice.dto.ForDialogDto;
 import ru.itis.androidtechpractice.dto.MessageDto;
 import ru.itis.androidtechpractice.models.Group;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +17,7 @@ public interface ChatsService {
 
     ChatDto createChat(CreateChatBetweenTwoUsersDto createChatBetweenTwoUsersDto);
 
-    MessageDto sendMessage(MessageDto messageDto);
+    MessageDto sendMessage(MessageDto messageDto) throws IOException;
 
     ChatDto getChatById(Integer id);
 

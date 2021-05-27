@@ -49,9 +49,7 @@ public class ChatEndpoint {
 
     @OnClose
     public void onClose(Session session) {
-        if (chatEndpoints.get(userId).getKey().equals(session)) {
             chatEndpoints.remove(userId);
-        }
     }
 
     @OnError

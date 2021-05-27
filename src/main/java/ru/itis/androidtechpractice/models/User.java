@@ -31,6 +31,7 @@ public class User {
     private Role role;
     private String hashPassword;
     private String photoLink;
+    private String firebaseToken;
 
     @ManyToMany(mappedBy = "users")
     private List<Group> groups;

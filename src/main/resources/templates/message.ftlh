@@ -15,8 +15,8 @@
         let webSocketMessage;
 
         function connect() {
-            webSocketMessage = new WebSocket('ws://c6311307eb46.ngrok.io/wschat/user/${user.getId()}/chat/${chat.getId()}');
-            webSocketChatList = new WebSocket('ws://c6311307eb46.ngrok.io/wschat/${uuid}');
+            webSocketMessage = new WebSocket('ws://16e4215dd9c9.ngrok.io/wschat/user/${user.getId()}/chat/${chat.getId()}');
+            webSocketChatList = new WebSocket('ws://16e4215dd9c9.ngrok.io/wschat/${uuid}');
 
             webSocketChatList.onmessage = function receiveMessage(response) {
                 let json = JSON.parse(response['data']);

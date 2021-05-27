@@ -34,4 +34,6 @@ public interface UsersService {
     List<UserDto> findAllUsersByEmailStartsWith(String query);
 
     List<ActProofDto> getUserApprovedProofs(Integer userId);
+
+    void saveFirebaseToken(Integer userId, String firebaseToken);
 }
